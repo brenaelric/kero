@@ -1,0 +1,188 @@
+aprenda tela
+  mudetamanhodajanela [640 480]
+  un
+  mudepos [-320 240]
+  carimg "fundo.png
+fim
+
+aprenda kero :x :y :k
+  mudex :x
+  mudey :y
+  carimg :k
+fim
+
+aprenda kero_movi :contador
+ se :contador=0 [
+  kero 50*-1 10 "kero-01.png]
+ se :contador=1 [
+  kero 50*-1 10 "kero-02.png]
+ se :contador=2 [
+ kero 50*-1 10 "kero-03.png]
+fim
+
+aprenda estrela :x :y :e
+  mudex :x
+  mudey :y
+  carimg :e
+fim
+
+aprenda estrela_tudo :contador_a
+ se :contador_a=0 [
+  estrela -290 230 "estrela-01.png
+  estrela -140 200 "estrela-02.png
+  estrela 0 230 "estrela-03.png
+  estrela 130 200 "estrela-04.png
+  estrela  240 230 "estrela-05.png]
+ se :contador_a=1 [
+  estrela -270 230 "estrela-03.png
+  estrela -130 200 "estrela-04.png
+  estrela 10 230 "estrela-02.png
+  estrela 140 200 "estrela-05.png
+  estrela 250 230 "estrela-01.png]
+ se :contador_a=2 [
+  estrela -295 230 "estrela-05.png
+  estrela -150 200 "estrela-04.png
+  estrela -10 230 "estrela-01.png
+  estrela 150 200 "estrela-03.png
+  estrela 260 230 "estrela-02.png] 
+ se :contador_a=3 [
+  estrela -290 230 "estrela-04.png
+  estrela -140 200 "estrela-05.png
+  estrela 0 230 "estrela-01.png
+  estrela 130 200 "estrela-02.png
+  estrela 240 230 "estrela-03.png] 
+ se :contador_a=4 [
+  estrela -270 230 "estrela-02.png
+  estrela -130 200 "estrela-01.png
+  estrela 10 230 "estrela-05.png
+  estrela 140 200 "estrela-03.png
+  estrela 250 230 "estrela-04.png] 
+fim
+
+aprenda mundo :md
+  mudepos [-175 -65]
+  carimg :md
+fim
+
+aprenda mundo_movi :contador_b
+ se :contador_b=0 [
+  mundo "mundo-01.png]
+ se :contador_b=1 [
+  mundo "mundo-23.png]
+ se :contador_b=2 [
+  mundo "mundo-22.png]
+ se :contador_b=3 [
+  mundo "mundo-21.png]
+ se :contador_b=4 [
+  mundo "mundo-20.png]
+ se :contador_b=5 [
+  mundo "mundo-19.png]
+ se :contador_b=6 [
+  mundo "mundo-18.png]
+ se :contador_b=7 [
+  mundo "mundo-17.png]
+ se :contador_b=8 [
+  mundo "mundo-16.png]
+ se :contador_b=9 [
+  mundo "mundo-15.png]
+ se :contador_b=10 [
+  mundo "mundo-14.png]
+ se :contador_b=11 [
+  mundo "mundo-13.png]
+ se :contador_b=12 [
+  mundo "mundo-12.png]
+ se :contador_b=13 [
+  mundo "mundo-11.png]
+ se :contador_b=14 [
+  mundo "mundo-10.png]
+ se :contador_b=15 [
+  mundo "mundo-09.png]
+ se :contador_b=16 [
+  mundo "mundo-08.png]
+ se :contador_b=17 [
+  mundo "mundo-07.png]
+ se :contador_b=18 [
+  mundo "mundo-06.png]
+ se :contador_b=19 [
+  mundo "mundo-05.png]
+ se :contador_b=20 [
+  mundo "mundo-04.png]
+ se :contador_b=21 [
+  mundo "mundo-03.png]
+ se :contador_b=22 [
+  mundo "mundo-02.png]
+fim 
+
+aprenda nuvens :x :y :n
+ mudex :x
+ mudey :y
+ carimg :n
+fim
+
+aprenda nuvem_tudo :contador_c
+ se :contador_c=0 [
+  nuvens 230 170 "nuvem01.png
+  nuvens -335 80 "nuvem02.png]
+ se :contador_c=1 [
+  nuvens 166 170 "nuvem01.png
+  nuvens -271 80 "nuvem02.png]
+ se :contador_c=2 [
+  nuvens 102 170 "nuvem01.png
+  nuvens -207 80 "nuvem02.png]
+ se :contador_c=3 [
+  nuvens 38 170 "nuvem01.png
+  nuvens -143 80 "nuvem02.png]
+ se :contador_c=4 [
+  nuvens -26 170 "nuvem01.png
+  nuvens  -79 80 "nuvem02.png]
+ se :contador_c=5 [
+  nuvens -90 170 "nuvem01.png
+  nuvens  -15 80 "nuvem02.png]
+ se :contador_c=6 [
+  nuvens -154 170 "nuvem01.png
+  nuvens  49 80 "nuvem02.png]
+ se :contador_c=7 [
+  nuvens -218 170 "nuvem01.png
+  nuvens  113 80 "nuvem02.png]
+ se :contador_c=8 [
+  nuvens -282 170 "nuvem01.png
+  nuvens  177 80 "nuvem02.png]
+ se :contador_c=9 [
+  nuvens -346 170 "nuvem01.png
+  nuvens  241 80 "nuvem02.png]
+ se :contador_c=10 [
+  nuvens -410 170 "nuvem01.png
+  nuvens  305 80 "nuvem02.png]
+fim
+
+aprenda clipe_kero
+ toquemp3 "groovy.mp3
+ escondetat
+ pd 90
+ atrlocal "contador 0
+ atrlocal "contador_a 0
+ atrlocal "contador_b 0
+ atrlocal "contador_c 0
+ atrlocal "tempomusica 0
+ enquanto [
+ :tempomusica <5815] [
+  tela
+  kero_movi :contador
+  estrela_tudo :contador_a
+  mundo_movi :contador_b
+  nuvem_tudo :contador_c
+  espere 3
+  atribua "tempomusica :tempomusica+3
+  atribua "contador :contador+1
+  se :contador >2 [
+   atribua "contador 0]
+  atribua "contador_a :contador_a+1
+  se :contador_a >4 [
+   atribua "contador_a 0]
+  atribua "contador_b :contador_b+1
+  se :contador_b >22 [
+   atribua "contador_b 0]
+  atribua "contador_c :contador_c+1
+  se :contador_c >10 [
+   atribua "contador_c 0]]
+fim

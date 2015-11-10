@@ -1,0 +1,5 @@
+Leia Antes de Executar
+
+Para executar o vídeo clipe, carregue o arquivo clipe_kero.lgo para dentro do 
+XLogo, em seguida digite na barra de texto clipe_kero e dê enter. Pronto.
+Agora é só assistir ao Kero em seu pequeno mundo ao som de Groovy!
